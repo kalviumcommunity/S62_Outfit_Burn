@@ -1,7 +1,7 @@
 # Outfit Burn
 
 ## **Project Idea**
-Outfit Burn is a unique platform designed to make fashion both fun and interactive. Users can post images of their outfits or share outfit ideas, and the platform allows other users—as well as an integrated AI—to **rate** or **roast** these outfits. It's a community-driven approach to blending fashion, humor, and creativity.
+Outfit Burn is a unique platform designed to make fashion both fun and interactive. Users can post images of their outfits or share outfit ideas, and the platform allows other users as well as predefined roasts to **rate** or **roast** these outfits. It's a community-driven approach to blending fashion, humor, and creativity.
 
 ## **Features**
 - **User-Generated Content:** Users can upload outfit images or share their creative fashion ideas.
