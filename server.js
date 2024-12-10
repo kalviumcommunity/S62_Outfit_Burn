@@ -8,10 +8,6 @@ app.get('/ping', (req, res) => {
     res.send(pingResponseMessage);
 });
 
-function logMessage(message) {
-    console.log(message);
-}
-
 app.listen(port, () => {
-    logMessage(`Server is running on localhost ${port}`);
+    console.log(`Server is running on localhost:${port}`);
 });
