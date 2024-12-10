@@ -1,9 +1,17 @@
-const express=require('express');
-const app=express();
-const port=3000;
-app.get('/ping',(req,res)=>{
-    res.send('Bwahahah!');
-})
-app.listen(port,()=>{
-    console.log(`Server is running on local host ${port}`)
-})
+const express = require('express');
+const app = express();
+const port = 3000;
+
+const pingResponseMessage = 'Bwahahah!';
+
+app.get('/ping', (req, res) => {
+    res.send(pingResponseMessage);
+});
+
+function logMessage(message) {
+    console.log(message);
+}
+
+app.listen(port, () => {
+    logMessage(`Server is running on localhost ${port}`);
+});
