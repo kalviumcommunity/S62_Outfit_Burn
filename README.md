@@ -21,6 +21,9 @@ Outfit Burn is a unique platform designed to make fashion both fun and interacti
      - Node.js with Express: For building the API and server-side functionality.
     - MongoDB with Mongoose: For database management and schema definition.
 
+## DEPLOYED LINK
+https://outfit-burn.onrender.com
+
 
 Thank you
 ---
