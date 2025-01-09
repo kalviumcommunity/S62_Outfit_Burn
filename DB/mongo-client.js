@@ -8,4 +8,4 @@ async function getDb(){
     db= db.collection('users');
     return db;
 }
-module.exports=getDb;
+module.exports={getDb, connection}
