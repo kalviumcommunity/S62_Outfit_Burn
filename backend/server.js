@@ -25,7 +25,7 @@ app.get('/', async (req, res) => {
     res.status(500).send({ message: error.message });
   }
 });
-app.use('/user-router', require('./routes/user.route'))
+app.use('/user', require('./routes/user.route'))
 
 app.listen(port, () => {
     console.log(`Server is running on localhost:${port}`);
