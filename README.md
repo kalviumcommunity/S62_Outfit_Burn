@@ -24,6 +24,8 @@ Outfit Burn is a unique platform designed to make fashion both fun and interacti
 ## DEPLOYED LINK
 https://outfit-burn.onrender.com
 
+## NETLIFY DEPLOYMENT LINK
+https://outfitburnn.netlify.app/
 
 Thank you
 ---
