@@ -25,6 +25,10 @@ app.get('/', async (req, res) => {
     res.status(500).send({ message: error.message });
   }
 });
+
+const cors = require('cors');
+app.use(cors());
+
 app.use('/user', require('./routes/user.route'))
 
 app.listen(port, () => {
