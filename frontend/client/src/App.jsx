@@ -1,4 +1,6 @@
 import OutfitBurnCard from "./components/outfitBurnCard";
+import EntitiesList from './components/entitiesList';
+
 import "./App.css";
 
 function App() {
@@ -36,6 +38,7 @@ function App() {
                     />
                 ))}
             </main>
+            <EntitiesList />
         </div>
     );
 }

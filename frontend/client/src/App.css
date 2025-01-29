@@ -1,176 +1,105 @@
-body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden;
-  background-color: #eaf1e4; /* Light greenish background */
-}
-
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-family: 'Poppins', sans-serif;
-  color: #2c3e50;
-  box-sizing: border-box;
-}
-
-.App-header {
-  position: relative; /* Keeps the content flow intact */
-  width: 100%; /* Full width of the page */
-  background: linear-gradient(45deg, #228B22, #006400); /* Green gradient */
-  padding: 3rem 0; /* Padding inside the header */
-  border-radius: 0; /* Remove rounded corners */
-  margin: 0; /* Remove any gaps */
-  color: #ffffff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center; /* Center-align text inside */
-
-}
-
-/* Text styles for App-header */
-.App-header h1 {
-  font-size: 3rem; /* Adjust heading size */
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.App-header p {
-  font-size: 1.2rem; /* Subheading size */
-  font-weight: 300;
-  margin-top: 0.5rem;
-}
-
-/* Outfit grid */
-.outfit-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 20px;
-  padding: 20px;
-  margin-top: 2rem;
-}
-
-/* Outfit burn card styles */
-.outfit-burn-card {
-  border: 1px solid #ddd;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-  background-color: #ffffff;
-}
-
-.outfit-burn-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
-}
-
-.outfit-image {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 15px;
-}
-
-.outfit-burn-card h3 {
-  font-size: 1.5rem;
-  margin: 1rem 0;
-  color: #2c3e50;
-}
-
-.burn-comment {
-  font-size: 1rem;
-  font-style: italic;
-  margin: 0 1rem 1rem;
-  color: #e74c3c;
-}
-
-/* Footer styles */
-footer {
-  margin-top: 2rem;
-  padding: 1rem 0;
-  background-color: #f4f4f4;
-  color: #888;
-  font-size: 0.9rem;
+/* Main App Styling */
+.App {
+  font-family: 'Arial', sans-serif;
   text-align: center;
-  border-top: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+
 }
 
-/* Button styles */
-button {
-  background: linear-gradient(45deg, #006400, #228B22); /* Royal green gradient */
-  color: #fff;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 25px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.3s ease;
+/* Header Section */
+.App-header {
+  background-color: #4CAF50; /* Enchanting Green */
+  color: white;
+
+  margin-bottom: 50px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  text-align: center;
 }
 
-button:hover {
-  background: linear-gradient(45deg, #228B22, #006400);
+h1 {
+  font-size: 4em;
+  margin: 0;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
-/* Responsive logo styles */
-.logo {
-  height: 6em;
-  margin: 1.5em auto;
-  transition: transform 0.3s ease, filter 0.3s;
+p {
+  font-size: 1.5em;
+  margin-top: 10px;
+  line-height: 1.6;
 }
 
-.logo:hover {
-  transform: scale(1.1);
-  filter: drop-shadow(0 0 2em #646cffaa);
+/* Outfit Cards Grid */
+.outfit-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  width: 100%;
 }
 
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Styling for Each Outfit Card */
+.outfit-card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  text-align: center;
+  transition: transform 0.3s ease;
 }
 
-/* Animation */
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.outfit-card:hover {
+  transform: translateY(-10px);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.outfit-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
 }
 
-/* Media queries for responsive design */
-@media (max-width: 1024px) {
-  .App-header h1 {
-    font-size: 2.5rem;
-  }
-
-  .App-header p {
-    font-size: 1rem;
-  }
-
-  .outfit-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
+.outfit-card h3 {
+  font-size: 2.5em;
+  color: #4CAF50; /* Enchanting Green */
+  margin-top: 20px;
+  text-transform: capitalize;
 }
 
-@media (max-width: 768px) {
-  .App-header h1 {
-    font-size: 2rem;
-  }
+.outfit-card p {
+  font-size: 1.2em;
+  font-style: italic;
+  color: #777;
+  margin-top: 10px;
+  padding: 0 15px;
+}
 
-  .App-header p {
-    font-size: 1rem;
-  }
+/* Entities Section */
+.entities-section {
+  margin-top: 100px;
+  padding: 50px 30px;
+  background-color: #e7f5e4; /* Light Green */
+  border-radius: 20px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+}
 
-  .outfit-grid {
-    grid-template-columns: 1fr;
-  }
+.entities-section h2 {
+  font-size: 3em;
+  color: #4CAF50; /* Enchanting Green */
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.entity {
+  font-size: 1.5em;
+  color: #4CAF50;
+  margin: 10px 0;
+  font-weight: bold;
 }
