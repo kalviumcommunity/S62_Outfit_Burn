@@ -1,105 +1,175 @@
-/* Main App Styling */
-.App {
-  font-family: 'Arial', sans-serif;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-
-}
-
-/* Header Section */
-.App-header {
-  background-color: #4CAF50; /* Enchanting Green */
-  color: white;
-
-  margin-bottom: 50px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
-  text-align: center;
-}
-
-h1 {
-  font-size: 4em;
-  margin: 0;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-p {
-  font-size: 1.5em;
-  margin-top: 10px;
-  line-height: 1.6;
-}
-
-/* Outfit Cards Grid */
-.outfit-grid {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-  margin-top: 50px;
-  width: 100%;
-}
-
-/* Styling for Each Outfit Card */
-.outfit-card {
-  background-color: white;
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-  width: 350px;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.outfit-card:hover {
-  transform: translateY(-10px);
-}
-
-.outfit-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 15px;
-}
-
-.outfit-card h3 {
-  font-size: 2.5em;
-  color: #4CAF50; /* Enchanting Green */
-  margin-top: 20px;
-  text-transform: capitalize;
-}
-
-.outfit-card p {
-  font-size: 1.2em;
-  font-style: italic;
-  color: #777;
-  margin-top: 10px;
-  padding: 0 15px;
-}
-
-/* Entities Section */
-.entities-section {
-  margin-top: 100px;
-  padding: 50px 30px;
-  background-color: #e7f5e4; /* Light Green */
-  border-radius: 20px;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  width: 100%;
-}
-
-.entities-section h2 {
-  font-size: 3em;
-  color: #4CAF50; /* Enchanting Green */
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-}
-
-.entity {
-  font-size: 1.5em;
-  color: #4CAF50;
-  margin: 10px 0;
-  font-weight: bold;
-}
+/* Global styles for the body */
+body {
+    font-family: 'Arial', sans-serif; /* Standard font */
+    background-color: #f7f7f7; /* Light gray background */
+    margin: 0;
+    padding: 0;
+    color: #111111; /* Dark text color for readability */
+  }
+  
+  /* Header styles */
+  .App-header {
+    background-color: #ffffff; /* White background for the header */
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd; /* Subtle border at the bottom */
+  }
+  
+  .App-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #111111;
+  }
+  
+  .App-header p {
+    font-size: 1rem;
+    color: #555555; /* Lighter text for secondary content */
+  }
+  
+  /* Main container for the app */
+  .App {
+    background-color: #f7f7f7; /* Light gray background for the body */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* Grid container for outfit cards */
+  .outfit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 20px;
+  }
+  
+  /* Entity List container */
+  .EntitiesList {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 40px;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .EntitiesList h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #111111;
+  }
+  
+  .EntitiesList ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .EntitiesList li {
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    background-color: #f0f0f0; /* Light gray for list items */
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333333;
+    transition: background-color 0.3s ease;
+  }
+  
+  .EntitiesList li:hover {
+    background-color: #e0e0e0; /* Slightly darker on hover */
+  }
+  
+  /* Styling for AddEntity form */
+  .AddEntityPage {
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 40px;
+  }
+  
+  .AddEntityPage h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #111111;
+    margin-bottom: 20px;
+  }
+  
+  .AddEntityPage form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .AddEntityPage label {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: #555555;
+  }
+  
+  .AddEntityPage input {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333333;
+  }
+  
+  .AddEntityPage button {
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .AddEntityPage button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Styling for individual cards (Outfit Burn Cards) */
+  .outfit-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .outfit-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .outfit-card img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .outfit-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 15px;
+    color: #111111;
+  }
+  
+  .outfit-card p {
+    font-size: 1rem;
+    color: #555555;
+    margin-top: 10px;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 768px) {
+    .outfit-grid {
+      grid-template-columns: 1fr; /* Single column layout on smaller screens */
+    }
+  }
+  
